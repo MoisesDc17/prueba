@@ -1,4 +1,4 @@
-# Proyecto wheather 
+# Proyecto Weather
 
 Aplicación web desarrollada con HTML, CSS y JavaScript.
 
