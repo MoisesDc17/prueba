@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Weather | Medipiel Concept</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <header class="main-header">
+        <h1>Skin Weather</h1>
+        <p>El clima cambia - Tu piel también.</p>
+    </header>
+
+    <section class="weather-box">
+        <h2>Clima de tu ciudad</h2>
+        
+
+      <p id="errorMsg" class="error hidden"></p>
+
+
+        <div id="weatherResult" class="weather-result hidden">
+
+           <div class="weather-icon-box">
+            <img id="weatherIcon" class="weather-icon" alt="icono del clima">
+             <span id="weatherPlaceholder">🌤️</span>
+            </div>
+
+            <h3 id="cityName"></h3>
+            <p><strong>Temperatura:</strong> <span id="temp"></span>°C</p>
+            <p><strong>Humedad:</strong> <span id="humidity"></span>%</p>
+            <p><strong>Índice UV:</strong> <span id="uv"></span></p>
+            <p><strong>Calidad del aire:</strong> <span id="air"></span></p>
+        </div>
+    </section>
+
+    <section id="recommendations" class="recommendations hidden">
+        <h2>Recomendación según tu clima</h2>
+
+        <div id="recContent"></div>
+    </section>
+    <footer>
+        <p>Concepto experimental — Medipiel</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="locationPopup" class="location-popup">
+
+    <div class="popup-box">
+        <span class="close-btn" onclick="closePopup()">×</span>
+        <h3>Detectar tu clima local 🌤️</h3>
+        <p>Podemos usar tu ubicación para recomendar productos según el clima de hoy.</p>
+
+       <button onclick="acceptLocation()">Permitir ubicación</button>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,305 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Baloo 2', sans-serif;
+}
+
+/* BODY */
+body {
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* HEADER */
+.main-header {
+  background: linear-gradient(135deg, #00b4d8, #90e0ef);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 0 0 25px 25px;
+}
+
+.main-header h1 {
+  font-size: 2.5rem;
+}
+
+.main-header p {
+  margin-top: 10px;
+}
+
+/* SECCIONES */
+.weather-box,
+.recommendations {
+  background: white;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.weather-box h2,
+.recommendations h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+/* RESULTADO CLIMA */
+.weather-result {
+  margin-top: 20px;
+  text-align: center;
+ 
+}
+
+.weather-result p {
+  margin: 6px 0;
+}
+
+.weather-icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+
+/* ICONO */
+.weather-icon {
+  width: 80px;
+  margin: 10px auto;
+  display: none;
+}
+
+.weather-icon.box{
+    display: block;
+}
+
+/* PLACEHOLDER */
+#weatherPlaceholder {
+  font-size: 40px;
+}
+
+/* 🔥 PRODUCTO */
+.product-card-real {
+  display: flex;
+  flex-direction: column; /* 🔥 CAMBIO CLAVE */
+  align-items: center;
+  text-align: center;
+
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 25px;
+
+  background: #fafafa;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05),
+    0 2px 5px rgba(0,0,0,0.03);
+};
+
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 50px;
+
+  color: #9ca3af;
+  font-size: 1rem;
+
+  border-top: 1px solid #eee;
+}
+
+
+/* IMAGEN */
+.product-card-real img {
+  width: 150px;
+  border-radius: 15px;
+}
+
+/* INFO */
+.product-info {
+  flex: 1;
+  text-align: center;
+}
+
+.product-info h4 {
+  margin-bottom: 8px;
+}
+
+.product-info p {
+  margin-bottom: 6px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* PRECIO */
+.product-info strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.3rem;
+  color: #00b4d8;
+  font-size: 1.1rem;
+}
+
+/* BOTÓN */
+.buy-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #00b4d8;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.buy-btn:hover {
+  background: #0096c7;
+}
+
+/* OVERLAY */
+.location-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CAJA */
+.popup-box {
+  position: relative;
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 360px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  animation: fadeInUp 0.4s ease;
+}
+
+/* BOTÓN CERRAR */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* TITULO */
+.popup-box h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* TEXTO */
+.popup-box p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* BOTÓN PRINCIPAL */
+.popup-box button {
+  background: linear-gradient(135deg, #00b4d8, #48cae4);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-box button:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMACIÓN */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .main-header {
+    padding: 30px 15px;
+  }
+
+  .main-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .main-header p {
+    font-size: 0.85rem;
+  }
+
+  /* CARDS */
+  .weather-box,
+  .recommendations {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  /* CLIMA */
+  .weather-result h3 {
+    font-size: 1rem;
+  }
+
+  .weather-result p {
+    font-size: 0.9rem;
+  }
+
+  /* PRODUCTO */
+  .product-card-real {
+    max-width: 240px;
+    padding: 20px;
+  }
+
+  .product-card-real img {
+    width: 120px;
+  }
+
+  .product-info h4 {
+    font-size: 1rem;
+  }
+
+  .product-info p {
+    font-size: 0.85rem;
+  }
+
+  /* BOTÓN */
+  .buy-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+}
